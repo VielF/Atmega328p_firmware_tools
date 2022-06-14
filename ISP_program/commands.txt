@@ -1,0 +1,8 @@
+
+avrdude -c arduino -b 115200 -p xyz
+
+avrdude -c arduino -b 19200 -p m328p -P COM5 -n
+
+avrdude -c arduino -b 19200 -p m328p -P COM5 -U lfuse:w:0xE2:m -U hfuse:w:0xD9:m
+
+avrdude -c arduino -b 19200 -p m328p -P COM5 -U flash:w:test.hex
